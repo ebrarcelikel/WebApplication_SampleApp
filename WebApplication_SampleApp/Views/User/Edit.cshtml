@@ -1,0 +1,55 @@
+﻿@using WebApplication_SampleApp.Models.Entities
+@model UserEditViewModel
+
+@{
+	ViewData["Title"] = "Edit User";
+}
+
+<div class="row p-4 mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+<div class="row p-4 mb-4">
+	<div class="col-4">
+
+		<div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+		<form method="post">
+			<div class="form-group">
+				<label asp-for="Fullname"> <b>Fullname</b></label>
+				<input asp-for="Fullname" class="form-control">
+				<span asp-validation-for="Fullname" class="text-danger small"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Username"><b>Username</b></label>
+				<input asp-for="Username" class="form-control" />
+				<span asp-validation-for="Username" class="text-danger small"></span>
+
+			</div>
+			<div class="form-group">
+				<label asp-for="Email"><b>Email Address</b></label>
+				<input asp-for="Email" class="form-control" />
+				<span asp-validation-for="Email" class="text-danger small"></span>
+
+			</div>
+			<div class="form-group form-check">
+				<label class="form-check-label" asp-for="IsActive"> Active</label>
+				<input class="form-check-input"asp-for="IsActive">
+			</div>
+			<div class="form-group form-check">
+				<label class="form-check-label" asp-for="IsAdmin"> Admin</label>
+				<input class="form-check-input" asp-for="IsAdmin">
+
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary mt-2"><i class="fa fa-save mr-2"></i> Save</button>
+				<a class="btn btn-secondry mt-2 " asp-action="Index"><i class="fa fa-arrow-left mr-2S"></i>Turn to List</a>
+			</div>
+		</form>
+
+
+
+	</div>
+
+
+</div>

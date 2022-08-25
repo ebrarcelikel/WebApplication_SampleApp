@@ -1,0 +1,55 @@
+﻿@using WebApplication_SampleApp.Models.Entities;
+
+@model Service
+@{
+	ViewData["Title"] = "Delete Service";
+}
+
+
+<div class="row p-4 mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+
+<div class="row p-4 mb-4">
+	<div class="col">
+		<p class="text-danger"><b>Are you sure want to delete this service?</b></p>
+		<small class="text-danger">This action cannot be undone!</small>
+	</div>
+</div>
+<div class="row mb-4 p-4">
+	<div class="col-4">
+		<dl class="row">
+			<dt class="col-4">Name</dt>
+			<dd class="col-8">@Model.Name</dd>
+
+			<dt class="col-4">Explanation</dt>
+			<dd class="col-8">@Model.Explanation</dd>
+
+			<dt class="col-4">Price</dt>
+			<dd class="col-8">@Model.Price</dd>
+
+			<dt class="col-4">Creater</dt>
+			<dd class="col-8">@Model.CreatedUser</dd>
+
+			<dt class="col-4">Created Date</dt>
+			<dd class="col-8">@Model.CreatedAt</dd>
+
+			<dt class="col-4">Updater</dt>
+			<dd class="col-8">@Model.ModifiedUser</dd>
+
+			<dt class="col-4">Updated Date</dt>
+			<dd class="col-8">@Model.ModifiedAt</dd>
+
+		</dl>
+	</div>
+</div>
+<div class="row mb-4">
+	<div class="col-4">
+		<form method="post">
+			<button type="submit" class="btn btn-danger mt-2"><i class="fa fa-trash mr-2"></i> Delete</button>
+			<a class="btn btn-secondary mt-2 " asp-action="Index"><i class="fa fa-arrow-left mr-2S"></i>Turn to List</a>
+		</form>
+	</div>
+</div>

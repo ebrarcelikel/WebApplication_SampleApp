@@ -1,0 +1,16 @@
+﻿@using WebApplication_SampleApp.Models.Entities;
+@using Microsoft.AspNetCore.Http;
+@using WebApplication_SampleApp.Core;
+@using Microsoft.AspNetCore.Mvc;
+
+@model IEnumerable<Category>
+
+
+
+@foreach (Category category in Model)
+{
+	 <a class="dropdown-item" asp-action="Index" asp-controller="Home" asp-route-categoryId="@category.ID">
+		<i class="fa fa-th-list mr-2"></i>
+		@category.Name
+	</a>
+}

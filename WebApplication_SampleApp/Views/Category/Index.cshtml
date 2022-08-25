@@ -1,0 +1,85 @@
+﻿@using WebApplication_SampleApp.Models.Entities
+@using Microsoft.AspNetCore.Http
+@using WebApplication_SampleApp.Core
+@{
+	string username = Context.Session.GetString(Constants.Username);
+	string role = Context.Session.GetString(Constants.UserRole);
+
+}
+
+@model IEnumerable<Category>
+@{
+	ViewData["Title"] = "Categories";
+	@*void RenderCategory(string Category)
+	{
+	<div style="cursor:pointer;" onclick="toastr.info('Selected category is created at @DateTimeData.GetDatetime() by @NameData.GetFullName()','')"></div>
+	}*@
+}
+
+
+<div class="row p-4 mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+<div class="row mb-4">
+	@if (string.IsNullOrEmpty(role) == false && role == "admin")
+	{
+		<div class="col">
+			<a class="btn btn-primary btn-sm" asp-action="Create"><i class="fa fa-plus mr-2"></i>Add Category</a>
+		</div>
+	}
+	<div class="col">
+		<a class="btn btn-success" onclick="toastr.info('Categories Table is shown');"><i class=" fa fa-info mr-2"></i> </a>
+		<a class="btn btn-danger" onclick="toastr.info('Categories Table is shown');"><i class=" fa fa-search mr-2"></i> </a>
+
+	</div>
+</div>
+
+<div class="row mb-4">
+	<div class="col table-responsive">
+		<table class="table table-hover table-striped table-sm small">
+			<thead>
+				<tr>
+					<th>Category Name</th>
+					<th>Explanation</th>
+					<th>Creater</th>
+					<th>Created Date</th>
+					<th>Updater</th>
+					<th>Updated Date</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model == null || Model.Count() == 0)
+				{
+					<tr class="text-center">
+						<td colspan="9">There is no category data found!</td>
+					</tr>
+				}
+				else
+				{
+					@foreach(Category category in Model)
+					{
+						<tr>
+							<td>@category.Name</td>
+							<td>@category.Explanation</td>
+							<td>@category.CreatedUser</td>
+							<td>@category.CreatedAt</td>
+							<td>@category.ModifiedUser</td>
+							<td>@category.ModifiedAt</td>
+							<td class="text-center">
+								<a class="btn btn-warning" asp-action="Edit" asp-route-id="@category.ID"><i class="fa fa-edit"></i></a>
+								<a class="btn btn-info" asp-action="Details" asp-route-id="@category.ID"><i class="fa fa-search"></i></a>
+								<a class="btn btn-danger" asp-action="Delete" asp-route-id="@category.ID"><i class="fa fa-trash"></i></a>
+
+							</td>
+						</tr>
+					}
+				}
+
+
+			</tbody>
+		</table>
+	</div>
+</div>

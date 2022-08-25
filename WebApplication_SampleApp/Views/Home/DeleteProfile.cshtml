@@ -1,0 +1,29 @@
+﻿
+<div class="row p-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">Delete This Account</h3>
+	</div>
+</div>
+<div class="row p-4">
+	<div class="col-3 text-center mt-2">
+		<img src="https://picsum.photos/id/1005/128" class="rounded-circle img-thumbnail" />
+	</div>
+	<div class="col-4 ">
+		<h3 class="display-4"> Ebrar Çelikel</h3>
+		<div class="mb-3">
+			<div><b>Username</b></div>
+			<div>ebrarcelikel</div>
+		</div>
+		<div class="mb-3">
+			<div><b>E-Mail Address</b></div>
+			<div>ebrarcelikel@gmail.com</div>
+		</div>
+		<div class="mb-3">
+			<p class="text-danger"><b>Are you sure want to remove this account?  This action cannot be undone. </b></p>
+			<form method="post" asp-action="DeleteProfile">
+				<button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash mr-2"></i> Remove Account</button>
+			</form>
+		</div>
+	</div>
+
+</div>

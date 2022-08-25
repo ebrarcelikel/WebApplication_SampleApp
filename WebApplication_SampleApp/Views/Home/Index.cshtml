@@ -1,0 +1,527 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="row  ">
+
+	<div class="col-12 ">
+		<div>
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="https://picsum.photos/800/400?random=3" alt="First slide">
+						
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="https://picsum.photos/800/400?random=1" alt="Second slide">
+						
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="https://picsum.photos/800/400?random=2" alt="Third slide">
+						
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<div class="row my-4">
+	<div class="col-10 offset-1">
+		<a asp-action="Index"> <span class="badge bg-secondary"><i class="fa fa-list mr-2"></i> All</span></a>
+		<a asp-action="Index" asp-route-id="1"> <span class="badge bg-secondary"><i class="fa fa-list mr-2"></i> Category</span></a>
+		<a asp-action="Index" asp-route-id="2"> <span class="badge bg-secondary"><i class="fa fa-list mr-2"></i> Category</span></a>
+		<a asp-action="Index" asp-route-id="3"> <span class="badge bg-secondary"><i class="fa fa-list mr-2"></i> Category</span></a>
+
+
+
+	</div>
+</div>
+
+<div>
+	<h4>Our Services</h4>
+	<div class="row mb-4">
+		<div class="col ">
+
+			<div class="card" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="col ">
+
+			<div class="card" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="col ">
+
+			<div class="card" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<div class="card mt-3" style="width: 27rem; height: 30rem;">
+				<img src="https://picsum.photos/800/400?random=5" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">@NameData.GetTitleName()</h5>
+					<div class="row">
+						<div class="col">
+							<h6 class="card-title">	<i>Category: </i>@NameData.GetFirstName()</h6>
+						</div>
+						<div class="col">
+							<h6 class="card-title">	<i>Price: </i>@TextData.GetNumeric(4) TL</h6>
+						</div>
+					</div>
+					<p class="card-text">@TextData.GetSentences(3)</p>
+					<div>
+						<small>Number of Orders:  @NumberData.GetNumber(0,100)</small>
+
+					</div>
+					<div class="card-footer text-left">
+
+						<!-- Button trigger modal -->
+						<button type="button" class=" btn btn-success btn-block btn-sm" data-toggle="modal" data-target="#exampleModal">
+							For more information
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">
+											Details of Service
+										</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										@TextData.GetSentences(3)
+									</div>
+									<div class="modal-footer ml-5">
+										<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
